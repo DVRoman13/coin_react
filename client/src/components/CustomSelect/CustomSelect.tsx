@@ -13,7 +13,7 @@ const CustomSelect: React.FC<{
 
   return (
     <>
-      <Typography sx={{marginRight: '20px'}}>{title}:</Typography>
+      <Typography>{title}:</Typography>
       <Select
         value={value as SortType}
         label='Sorting'

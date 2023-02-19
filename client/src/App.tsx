@@ -19,16 +19,16 @@ const App: React.FC = () => {
 
   return (
     <Box>
-      <Box sx={{margin: '20px 0', display: 'flex', alignItems: 'center'}}>
+      <Box sx={{margin: '20px 0', display: 'flex', alignItems: 'center', gap: '0 20px'}}>
         <CustomSelect
           handler={handleChange}
-          title={'Sorting:'}
+          title={'Sorting'}
           value={sortRule}
           items={sortItems}
         />
         <CustomSelect
           handler={handleChangeTimeInterval}
-          title={'Time Interval:'}
+          title={'Time Interval'}
           value={timeToScan}
           items={timeIntervals}
         />
