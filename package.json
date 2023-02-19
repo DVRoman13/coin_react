@@ -1,0 +1,23 @@
+{
+  "name": "cointask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "server": "nodemon index.ts",
+    "client": "npm run dev --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \" npm run client\""
+  },
+  "author": "Roman Dunaiev",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.3.3",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
