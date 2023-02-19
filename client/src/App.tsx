@@ -15,7 +15,7 @@ const App: React.FC = () => {
 
   const handleChangeTimeInterval = useCallback((event: SelectChangeEvent) => {
     setTimeToScan(event.target.value);
-  }, [])
+  }, []);
 
   return (
     <Box>
