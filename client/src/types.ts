@@ -10,6 +10,11 @@ export interface CoinQuery {
 
 export type SortType = 'standard' | 'expensive' | 'cheap'
 
+export interface SelectItems {
+  value: string;
+  title: string
+}
+
 export interface Coin {
   id:                               number;
   name:                             string;

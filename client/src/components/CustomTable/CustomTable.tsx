@@ -9,12 +9,12 @@ import Loader from '../Loader/Loader';
 
 const CustomTable:React.FC<{
   sortRule: SortType
-}> = ({sortRule}) => {
-
+  timeInterval: string
+}> = ({sortRule, timeInterval}) => {
   const [start, setStart] = React.useState(1);
 
   const {data: coinData, isLoading} = appApi.useGetDataQuery({limit: COINS_PER_PAGE, start: start}, {
-    pollingInterval: undefined
+    pollingInterval: +timeInterval
   })
 
   const [page, setPage] = React.useState(0);
