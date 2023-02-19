@@ -6,7 +6,7 @@ import CustomSelect from './components/CustomSelect/CustomSelect';
 import { sortItems, timeIntervals } from './constants';
 
 const App: React.FC = () => {
-  const [sortRule, setSortRule] = useState<SortType>('standard');
+  const [sortRule, setSortRule] = useState<SortType>(sortItems[0].value as SortType);
   const [timeToScan, setTimeToScan] = useState(timeIntervals[0].value)
 
   const handleChange = useCallback((event: SelectChangeEvent) => {
@@ -14,7 +14,7 @@ const App: React.FC = () => {
   }, []);
 
   const handleChangeTimeInterval = useCallback((event: SelectChangeEvent) => {
-    setTimeToScan(event.target.value as SortType);
+    setTimeToScan(event.target.value);
   }, [])
 
   return (
